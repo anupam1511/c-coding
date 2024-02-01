@@ -1,3 +1,6 @@
+// user input an integer by stdin buffer and convert it to string 
+
+#include<stdio.h>
 #include<stdlib.h>
 int main()
 {
@@ -18,14 +21,14 @@ int main()
     int i ;
     for( i = count-1 ; i >= 0 ; i--)
     {
-         p[i] = u%10 ;
+         p[i] = (u%10)+48 ;
 
         u = u/10;
     }
     p[count] = '\0';
     for( i = 0 ; i < count ; i++)
     {
-         printf("%d" , p[i]);
+         printf("ascii symbol : %c , ascii value in decimal :  %d\n" , p[i] , p[i]);
     }
     printf("\n");
    // printf("%c" , p[3]); // null not able to print ok....
@@ -34,7 +37,9 @@ int main()
 
 /* output   
 enter your integer
-123456
-total integer number are : 6
-123456*/
-
+123
+total integer number are : 3
+ascii symbol : 1 , ascii value in decimal :  49
+ascii symbol : 2 , ascii value in decimal :  50
+ascii symbol : 3 , ascii value in decimal :  51
+ */
